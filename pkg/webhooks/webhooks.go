@@ -168,7 +168,7 @@ func HealthProbe(ctx context.Context) healthz.Checker {
 		// Close the body to avoid leaking file descriptors
 		// Always read the body so we can re-use the connection: https://stackoverflow.com/questions/17948827/reusing-http-connections-in-go
 		_, _ = io.ReadAll(res.Body)
-
+issue
 
 		// If there is a server-side error or path not found,
 		// consider liveness to have failed
